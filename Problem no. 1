@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int numbers[10], sum = 0;
+	//get input
+	for (int i = 0; i < 10; ++i)
+	{
+		cout << "Enter number: ";
+		cin >> numbers[i];
+		sum += numbers[i];
+	}
+	//sort
+	for (int i = 0; i < 9; ++i)
+	{
+		for (int j = 0; j < 9 - i; ++j)
+		{
+			if (numbers[j] > numbers[j + 1])
+			{
+				int temp = numbers[j];
+				numbers[j] = numbers[j + 1];
+				numbers[j + 1] = temp;
+			}
+		}
+	}
+
+	cout << "\nsmallest integer: " << numbers[0] << "\nlargest integer: " << numbers[9] << "\nsum of integers: " << sum << "\naverage of integers: " << sum / 10.0;
+
+	cin.get();
+	return 0;
+}
