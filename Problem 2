@@ -1,0 +1,37 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int temp[3][7];
+	//get input
+	for (int i = 0; i < 3; ++i)
+	{
+		cout << "Province ";
+		if (i == 0) cout << "A";
+		else if (i == 1) cout << "B";
+		else cout << "C";
+		cout << ":\n";
+		for (int j = 0; j < 7; ++j)
+		{
+			cout << "\tDay " << j + 1 << ": ";
+			cin >> temp[i][j];
+		}
+	}
+	//show output
+	for (int i = 0; i < 3; ++i)
+	{
+		cout << "\nProvince ";
+		if (i == 0) cout << "A";
+		else if (i == 1) cout << "B";
+		else cout << "C";
+		cout << ":\n";
+		for (int j = 0; j < 7; ++j)
+		{
+			cout << "\tDay " << j + 1 << ": " << temp[i][j] << '\n';
+		}
+	}
+	cin.get();
+	return 0;
+}
